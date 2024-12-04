@@ -11,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Tables\Table;
 use Filament\Tables;
 use Illuminate\Support\Str;
+use App\Filament\Resources\TagResource\Widgets;
 
 class TagResource extends Resource
 {
@@ -64,6 +65,13 @@ class TagResource extends Resource
             'index' => Pages\ListTags::route('/'),
             'create' => Pages\CreateTag::route('/create'),
             'edit' => Pages\EditTag::route('/{record}/edit'),
+        ];
+    }
+
+    public static function getWidgets(): array
+    {
+        return [
+            Widgets\StatsOverview::class,
         ];
     }
 }
