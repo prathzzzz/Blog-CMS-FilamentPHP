@@ -77,10 +77,7 @@ To create an admin user for the Filament admin panel, run:
 php artisan make:filament-user
 ```
 
-Follow the interactive prompts to set up your admin credentials. Once created, you can access the admin panel at:
-```
-http://your-domain.com/admin
-```
+
 
 ## Usage
 
