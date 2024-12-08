@@ -47,42 +47,26 @@ This is an open-source blog content management system (CMS) built using Laravel,
    php artisan key:generate
    ```
 
-5. **Run migrations:**
+5. **Run migrations and seed the database:**
 
    ```bash
-   php artisan migrate
+   php artisan migrate --seed
    ```
 
-6. **Seed the database (optional):**
-
-   ```bash
-   php artisan db:seed
-   ```
-
-7. **Serve the application:**
+6. **Serve the application:**
 
    ```bash
    php artisan serve
    ```
 
-8. **Access the application:**
+7. **Access the application:**
 
    Open your browser and go to `http://localhost:8000`.
-
-## Creating Admin User
-
-To create an admin user for the Filament admin panel, run:
-
-```bash
-php artisan make:filament-user
-```
-
-
 
 ## Usage
 
 - **Admin Panel**: Access the admin panel at `/admin` to manage users, posts, and categories.
-- **Authentication**: Use the default login credentials provided in the database seeder or create a new user via the admin panel.
+- **Authentication**: Use the default login credentials provided in the database seeder.
 
 ## Contributing
 
