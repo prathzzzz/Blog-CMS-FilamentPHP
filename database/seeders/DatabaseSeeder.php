@@ -7,16 +7,18 @@ use App\Models\Post;
 use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
         // Create admin user
-        // User::factory()->create([
-        //     'name' => 'Admin User',
-        //     'email' => 'admin@example.com',
-        // ]);
+        User::factory()->create([
+            'name' => 'Admin User',
+            'email' => 'admin@example.com',
+            'password' => Hash::make('password'),
+        ]);
 
         // Create additional users
         User::factory(5)->create();
